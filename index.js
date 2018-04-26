@@ -27,7 +27,7 @@ var server = http.createServer(function(request, response) {
             console.log("Chegou no END", port);
 
             response.write('Chegou no GET <br/>');
-            response.end('Finalizou.<br/>');
+            response.end('Finalizou:'+body+'<br/>');
 
 
             // 
