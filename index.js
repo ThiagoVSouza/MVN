@@ -6,8 +6,7 @@ var server = http.createServer(function(request, response) {
 
     final = 0;
 
-    const url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php";
-
+    
     response.writeHead(200, {"Content-Type": "text/plain"});
 
     let body = [];
@@ -22,6 +21,8 @@ var server = http.createServer(function(request, response) {
 
         response.write('Chegou no BODY : '+body+'<br/>');
         
+        const url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php?i="+body;
+
         http.get(url, res => {
 
             res.setEncoding("utf8");
