@@ -20,13 +20,10 @@ var server = http.createServer(function(request, response) {
 
         body = Buffer.concat(body).toString();
 
-        response.write('Chegou no BODY<br/>');
+        response.write('Chegou no BODY : '+body+'<br/>');
         
         http.get(url, res => {
 
-            console.log("Chegou no GET", port);
-            response.write('Chegou no GET <br/>');
-    
             res.setEncoding("utf8");
             let body1 = "";
             res.on("data", data => {
@@ -35,10 +32,7 @@ var server = http.createServer(function(request, response) {
     
             res.on("end", () => {
     
-                console.log("Chegou no END", port);
-    
-                response.write('Chegou no GET <br/>');
-                response.end('Finalizou:'+body1+'<br/>');    
+               response.end('Finalizou:'+body1+'<br/>');    
     
             });
     
