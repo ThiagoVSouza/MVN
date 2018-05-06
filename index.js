@@ -19,7 +19,7 @@ var server = http.createServer(function(request, response) {
 
         body = Buffer.concat(body).toString();
 
-        response.write('Chegou no BODY : '+body+'<br/>');
+        // response.write('Chegou no BODY : '+body+'<br/>');
         
         const url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php?i="+body;
 
@@ -33,8 +33,9 @@ var server = http.createServer(function(request, response) {
     
             res.on("end", () => {
     
-               response.end('Finalizou:'+body1+'<br/>');    
-    
+               // response.end('Finalizou:'+body1+'<br/>');    
+               response.end(body1);    
+     
             });
     
     
