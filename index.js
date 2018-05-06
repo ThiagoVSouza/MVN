@@ -9,7 +9,26 @@ var server = http.createServer(function(request, response) {
     const url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php";
 
     response.writeHead(200, {"Content-Type": "text/plain"});
-            
+
+    let body = [];
+
+    request.on('data', (chunk) => {
+
+      body.push(chunk);
+
+    }).on('end', () => {
+
+        body = Buffer.concat(body).toString();
+
+        response.write('Chegou no BODY<br/>');
+        response.end('Finalizou:'+body+'<br/>');
+
+
+    });
+
+
+
+    /*
 
     http.get(url, res => {
 
@@ -30,16 +49,16 @@ var server = http.createServer(function(request, response) {
             response.end('Finalizou:'+body+'<br/>');
 
 
-            // 
+            //
 
             // response.write('Chegou no END <br/>');
 
-            // 
+            //
 
             //  body = JSON.parse(body);
             // response.writeHead(200, {"Content-Type": "text/plain"});
             // response.end("Resposta: "+body.results[0].formatted_address);
-   
+
 
 
         });
@@ -47,20 +66,22 @@ var server = http.createServer(function(request, response) {
 
     });
 
+    */
+
     // response.writeHead(200, {"Content-Type": "text/plain"});
     // response.end("Hello World 5");
 
 
     /*
 
-    
+
     http.get(url, res => {
 
-        
+
 
         res.setEncoding("utf8");
         let body = "";
-       
+
         res.on("data", data => {
             body += data;
         });
@@ -70,27 +91,27 @@ var server = http.createServer(function(request, response) {
         res.on("end", () => {
 
             body = JSON.parse(body);
-   
-            
+
+
             console.log(
                 `City: ${body.results[0].formatted_address} -`,
                 `Latitude: ${body.results[0].geometry.location.lat} -`,
                 `Longitude: ${body.results[0].geometry.location.lng}`
              );
-             
+
 
             // response.writeHead(200, {"Content-Type": "text/plain"});
             // response.end("Hello World : "+body.results[0].formatted_address);
 
         });
 
-   
+
     });
 
     // console.log('Chegou no fim')
 
     */
-   
+
 
 });
 
