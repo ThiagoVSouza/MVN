@@ -1,3 +1,57 @@
+
+var net = require('net');
+var http = require('http');
+
+net.createServer(function(sock) {
+    
+    // We have a connection - a socket object is assigned to the connection automatically
+    console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);
+    
+    // Add a 'data' event handler to this instance of socket
+    sock.on('data', function(data) {
+        
+        console.log('DATA ' + sock.remoteAddress + ': ' + data);
+        // Write the data back to the socket, the client will receive it as data from the server
+        sock.write('Enviado:"' + data + '"');
+        
+        /*
+
+        const url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php?i="+data;
+
+        http.get(url, res => {
+
+            res.setEncoding("utf8");
+            let body1 = "";
+            res.on("data", data => {
+                body1 += data;
+            });
+    
+            res.on("end", () => {
+    
+               // response.end('Finalizou:'+body1+'<br/>');    
+               response.end(body1);    
+     
+            });
+    
+    
+        });
+
+        */
+
+    });
+    
+    // Add a 'close' event handler to this instance of socket
+    sock.on('close', function(data) {
+        console.log('CLOSED: ' + sock.remoteAddress +' '+ sock.remotePort);
+    });
+    
+}).listen(5000);
+
+
+
+
+/*
+
 var http = require('http');
 
 var final = 0;
@@ -48,7 +102,7 @@ var server = http.createServer(function(request, response) {
 
     });
 
-
+    */
 
     /*
 
@@ -134,6 +188,7 @@ var server = http.createServer(function(request, response) {
 
     */
 
+/*
 
 });
 
@@ -141,3 +196,5 @@ var port = process.env.PORT || 1337;
 server.listen(port);
 
 console.log("Server running at http://localhost:%d", port);
+
+*/
