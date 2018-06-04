@@ -12,7 +12,8 @@ net.createServer(function(sock) {
         
         console.log('DATA ' + sock.remoteAddress + ': ' + data);
         // Write the data back to the socket, the client will receive it as data from the server
-        sock.write('Enviado:"' + data + '"');
+        sock.write('"' + data + '"');
+        // Enviado:
         
         /*
 
@@ -42,7 +43,10 @@ net.createServer(function(sock) {
     
     // Add a 'close' event handler to this instance of socket
     sock.on('close', function(data) {
+
         console.log('CLOSED: ' + sock.remoteAddress +' '+ sock.remotePort);
+        sock.write('Fim:');
+        
     });
     
 }).listen(5000);
