@@ -1,4 +1,82 @@
 
+
+var net = require('net');
+
+var server = net.createServer(function(socket) {
+
+    // socket.write('Echo server\r\n');
+    
+    socket.on('data', function(chunk) {
+        socket.write(chunk);
+    });
+    socket.on('end', socket.end);
+
+});
+
+server.listen(5000);
+
+/*
+var http = require('http');
+
+var final = 0;
+
+var server = http.createServer(function(request, response) {
+
+    final = 0;
+
+    
+    response.writeHead(200, {"Content-Type": "text/plain"});
+
+    let body = [];
+
+    request.on('data', (chunk) => {
+
+      body.push(chunk);
+
+    }).on('end', () => {
+
+        body = Buffer.concat(body).toString();
+
+        // response.write('Chegou no BODY : '+body+'<br/>');
+        
+        const url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php?i="+body;
+
+        http.get(url, res => {
+
+            res.setEncoding("utf8");
+            let body1 = "";
+            res.on("data", data => {
+                body1 += data;
+            });
+    
+            res.on("end", () => {
+    
+               // response.end('Finalizou:'+body1+'<br/>');    
+               response.end(body1);    
+     
+            });
+    
+    
+        });
+
+
+
+        // response.end('Finalizou:'+body+'<br/>');
+
+
+    });
+
+});
+
+var port = process.env.PORT || 1337;
+server.listen(port);
+
+console.log("Server running at http://localhost:%d", port);
+
+*/
+
+/*
+
 var net = require('net');
 var http = require('http');
 
@@ -15,7 +93,7 @@ net.createServer(function(sock) {
         sock.write('"' + data + '"');
         // Enviado:
         
-        /*
+        
 
         const url = "http://n1.nortrix.net/apps/vinhecard/script_servidor.php?i="+data;
 
@@ -37,7 +115,7 @@ net.createServer(function(sock) {
     
         });
 
-        */
+        
 
     });
     
@@ -51,7 +129,7 @@ net.createServer(function(sock) {
     
 }).listen(5000);
 
-
+*/
 
 
 /*
