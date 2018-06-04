@@ -7,7 +7,7 @@ var server = net.createServer(function(socket) {
     
 });
 
-server.listen(1337, '127.0.0.1');
+server.listen(80);
 
 
 
