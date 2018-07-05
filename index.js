@@ -7,13 +7,13 @@ var server = net.createServer(function(socket) {
     socket.write('Echo server\r\n');
     socket.pipe(socket);
     
-    console.log('Listening on port ' + port)
+   
     
 });
 
 server.listen(1234);
 
-
+ console.log('Server running');
 
 
 
