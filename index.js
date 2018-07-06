@@ -11,7 +11,7 @@ var server = net.createServer(function(socket) {
     
 });
 
-server.listen(443);
+server.listen(1234);
 
  console.log('Server running');
 
