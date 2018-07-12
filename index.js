@@ -1,11 +1,19 @@
 
 
 var net = require('net');
+// var http = require('http');
 
 var server = net.createServer(function(socket) {
 
-    socket.write('Echo server\r\n');
-    socket.pipe(socket);
+    // socket.write('Echo server\r\n');
+    // socket.pipe(socket);
+    
+    socket.on('data', function(chunk) {
+        socket.write(chunk);
+    });
+    
+   socket.on('end', socket.end);
+    
     
    
     
@@ -13,7 +21,7 @@ var server = net.createServer(function(socket) {
 
 server.listen(1234);
 
- console.log('Server running');
+console.log('Server running');
 
 
 
