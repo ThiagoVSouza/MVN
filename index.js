@@ -8,6 +8,8 @@ var server = net.createServer(function(socket) {
     // socket.write('Echo server\r\n');
     socket.pipe(socket);
     
+    console.log('Recebido: '+socket);
+    
     /*
     
     socket.on('data', function(chunk) {
