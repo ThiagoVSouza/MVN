@@ -6,9 +6,22 @@ var net = require('net');
 var server = net.createServer(function(socket) {
 
     // socket.write('Echo server\r\n');
-    socket.pipe(socket);
+    // socket.pipe(socket);
     
-    console.log('Recebido: '+socket);
+    let body = [];
+    
+    socket.on('data', function(chunk) {
+        
+        body.push(chunk);
+        
+    });
+    
+    body = Buffer.concat(body).toString();
+       
+    console.log('Recebido: '+body);
+                
+    socket.write(body);
+   
     
     /*
     
