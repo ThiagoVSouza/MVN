@@ -8,19 +8,24 @@ var server = net.createServer(function(socket) {
     // socket.write('Echo server\r\n');
     // socket.pipe(socket);
     
-    let body = [];
+     var completeData = '';
     
     socket.on('data', function(chunk) {
         
-        body.push(chunk);
+        completeData = completeData + chunk;
         
     });
     
-    body = Buffer.concat(body).toString();
-       
-    console.log('Recebido: '+body);
+    socket.on('end', function() {
+        
+        console.log('Recebido: '+completeData);
                 
-    socket.write(body);
+        socket.write(completeData);
+        
+    });
+    
+       
+    
    
     
     /*
