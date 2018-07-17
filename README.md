@@ -23,19 +23,19 @@ One person (or group of individuals) that have full authority on the nation (exe
 **Summary of Responsabilities**
 
 ````
-**Executive:** ruler(s) decides everything
+Executive: ruler(s) decides everything
 ````
 
 ````
-**Legislative:** ruler(s) creates all laws
+Legislative: ruler(s) creates all laws
 ````
 
 ````
-**Judiciary:** mediation is disabled
+Judiciary: mediation is disabled
 ````
 
 ````
-**Voting:** voting is disabled
+Voting: voting is disabled
 ````
 
 ## Direct Democracy
