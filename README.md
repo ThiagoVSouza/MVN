@@ -8,22 +8,36 @@ Every nation can be be divided in 3 major branchs:
 
 - Executive - Responsible for the overall administration of the nation. In our MVN it means: change nation name, change meta data, aprove users to join (if the nation is not set to public).
 
-- Legislative - Responsible for creating the rules (laws) by which the name functions. In our MVN this means creating and modifying laws.
-
+- Legislative - Responsible for creating the rules (laws) by which the name functions. In our MVN this means creating and modifying laws. ( A law is just a plain text referenced by a hash/link to ipfs.)
 
 - Judiciary - responsible for enforcing the rules. In our MVN will be responsible for mediation: removing citizens and canceling laws.
 
-**M V N**
-
-Parameters for a nation:
+**Parameters for a nation:**
 
 - Citizenship: 
-> 1. Public nation: Anyone can join a nation
-> 2. Permissioned public: Joining a nation requires executive branch approval
-> 3. Private Nation: Only the executive branch can manually add a new citizen
+> - Public nation: Anyone can join a nation
+> - Permissioned public: Joining a nation requires executive branch approval
+> - Private Nation: Only the executive branch can manually add a new citizen
 
-- 
+- Executive Branch (options 1-3 should be a flag as they can be available at the same time)
+> - change on the nation info by Ruler(S)
+> - change on the nation done by President (can be considered a ruler for programming purposes?)
+> - change on the nation info by Direct Vote
+> - change on the nation info by Representant Vote
+> - Disabled
 
+- Legislative Branch (options 1-4 should be a flag as they can be available at the same time)
+> - law created by the ruler
+> - law created by direct vote
+> - law created by indirect vote
+> - Laws is Disabled
+
+- Judiciary Branch (options 1-4 should be a flag as they can be available at the same time)
+> - Mediation done by the ruler
+> - Mediation done by direct vote (crowd jury)
+> - Mediation done by indirect vote
+> - Mediation done by a third party (user with permission)
+> - Mediation is Disabled
 
 ## 1) Despotism
 
