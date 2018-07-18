@@ -19,14 +19,14 @@ Every nation can be be divided in 3 major branchs:
 > - Permissioned public: Joining a nation requires executive branch approval
 > - Private Nation: Only the executive branch can manually add a new citizen
 
-- Executive Branch (options 1-3 should be a flag as they can be available at the same time)
+- Executive Branch (options 1-4 should be a flag as they can be available at the same time)
 > - change on the nation info by Ruler(S)
 > - change on the nation done by President (can be considered a ruler for programming purposes?)
 > - change on the nation info by Direct Vote
 > - change on the nation info by Representant Vote
 > - Disabled
 
-- Legislative Branch (options 1-4 should be a flag as they can be available at the same time)
+- Legislative Branch (options 1-3 should be a flag as they can be available at the same time)
 > - law created by the ruler
 > - law created by direct vote
 > - law created by indirect vote
