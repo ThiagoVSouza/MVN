@@ -6,63 +6,110 @@
 
 Every nation can be be divided in 3 major branchs:
 
-1. Executive - Responsible for the overall administration of the nation. In our MVN it means: change nation name, change meta data, aprove users to join (if the nation is not set to public).
+- Executive - Responsible for the overall administration of the nation. In our MVN it means: change nation name, change meta data, aprove users to join (if the nation is not set to public).
 
-2. Legislative - Responsible for creating the rules (laws) by which the name functions. In our MVN this means creating and modifying laws.
-
-
-3. Judiciary - responsible for enforcing the rules. In our MVN will be responsible for mediation: removing citzens and canceling laws.
+- Legislative - Responsible for creating the rules (laws) by which the name functions. In our MVN this means creating and modifying laws.
 
 
-## Despotism
+- Judiciary - responsible for enforcing the rules. In our MVN will be responsible for mediation: removing citzens and canceling laws.
+
+
+## 1) Despotism
 
 **Definition**
 
 One person (or group of individuals) that have full authority on the nation (executive, legislative and judiciary).
 
+**Summary**
+
+````
+Roles: Rulers and Citzens.
+````
+
+````
+Executive: ruler(s) decides changes on nation.
+````
+
+````
+Legislative: ruler(s) creates all laws.
+````
+
+````
+Judiciary: mediation is disabled.
+````
+
+````
+Voting: voting is disabled.
+````
+
+## 2) Direct Democracy
+
+**Definition**
+
+Every citzen will cast a vote to do everything inside the nation.
+
 **Summary of Responsabilities**
 
 ````
-Executive: ruler(s) decides everything
+Roles: Citzens.
 ````
 
 ````
-Legislative: ruler(s) creates all laws
+Executive: citzens will decide a change through vote
 ````
 
 ````
-Judiciary: mediation is disabled
+Legislative: citzens will decide a new law or the change of an existing one.
 ````
 
 ````
-Voting: voting is disabled
+Judiciary: citzens will vote on any mediation.
 ````
 
-## Direct Democracy
+````
+Voting: voting is enabled.
+````
+
+## 3) Republicanism
 
 **Definition**
 
-Every citzen will cast a vote to do the executive functions and also legislative functions.
+A president is elected by direct vote to be resposible for the executive branch.
+The citzens will cast a vote for X representants that will be responsible for the legislative branch.
+Citzens will also cast a vote to elect the mediator for the nation.
 
 **Summary of Responsabilities**
 
+````
+Roles: Citzens, Mediator, President, Representants.
+````
 
-## Indirect Democracy
+````
+Executive:  The president
+````
+
+````
+Legislative: citzens will decide a new law or the change of an existing one.
+````
+
+````
+Judiciary: citzens will vote on any mediation.
+````
+
+````
+Voting: voting is enabled. citzens will cast a vote to elect the president.
+````
+
+
+## 4) Parlamentary Despotism
 
 **Definition**
 
-Every citzend will cast a vote
-
-
-
-## Parlamentarism
-
-**Definition**
 
 
 
 
-## Republicanism
+## 5) Anarchy
 
 **Definition**
 
@@ -71,7 +118,6 @@ The citzens will cast a vote for X representants that will be responsible for th
 Citzens will also cast a vote to elect the mediator for the nation.
 
 **Structure**
-
 
 
 
